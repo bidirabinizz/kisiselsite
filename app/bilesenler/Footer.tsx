@@ -18,7 +18,7 @@ export default function Footer({ dil }: FooterProps) {
         {/* Sosyal Medya İkonları */}
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/bahadirbuyuktopac"
+            href="https://github.com/bidirabinizz"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted hover:text-accent transition-colors duration-200"

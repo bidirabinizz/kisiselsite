@@ -23,9 +23,9 @@ export default function YuklemeEkrani() {
         const artis = Math.floor(Math.random() * 15) + 5;
         progress = Math.min(progress + artis, 99);
       }
-      
+
       setYuklenmeYuzdesi(progress);
-      
+
       if (progress >= 100) {
         clearInterval(interval);
         // Bar %100 olduktan 400ms sonra fade-out başlatıyoruz
@@ -58,18 +58,16 @@ export default function YuklemeEkrani() {
 
   return (
     <div
-      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-background transition-opacity duration-500 ease-in-out ${
-        yuklenmeYuzdesi >= 100 ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-background transition-opacity duration-500 ease-in-out ${yuklenmeYuzdesi >= 100 ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
     >
       <div className="flex flex-col items-center max-w-xs w-full px-6 text-center">
         {/* Bahadır Büyüktopaç Yazısı (Aşağıdan yukarı kayarak gelir) */}
         <h1
-          className={`text-sm font-black uppercase tracking-[0.2em] text-foreground transition-all duration-700 ease-out transform ${
-            animasyonBaslat
+          className={`text-sm font-black uppercase tracking-[0.2em] text-foreground transition-all duration-700 ease-out transform ${animasyonBaslat
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-6'
-          }`}
+            }`}
         >
           Bahadır Büyüktopaç
         </h1>
@@ -86,14 +84,13 @@ export default function YuklemeEkrani() {
         <div className="flex items-center gap-6 justify-center">
           {/* GitHub */}
           <a
-            href="https://github.com/bahadirbuyuktopac"
+            href="https://github.com/bidirabinizz"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-muted hover:text-accent transition-all duration-700 delay-100 ease-out transform ${
-              animasyonBaslat
+            className={`text-muted hover:text-accent transition-all duration-700 delay-100 ease-out transform ${animasyonBaslat
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
-            }`}
+              }`}
             aria-label="GitHub"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -106,11 +103,10 @@ export default function YuklemeEkrani() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-muted hover:text-accent transition-all duration-700 delay-200 ease-out transform ${
-              animasyonBaslat
+            className={`text-muted hover:text-accent transition-all duration-700 delay-200 ease-out transform ${animasyonBaslat
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
-            }`}
+              }`}
             aria-label="Instagram"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -123,11 +119,10 @@ export default function YuklemeEkrani() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-muted hover:text-accent transition-all duration-700 delay-300 ease-out transform ${
-              animasyonBaslat
+            className={`text-muted hover:text-accent transition-all duration-700 delay-300 ease-out transform ${animasyonBaslat
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
-            }`}
+              }`}
             aria-label="LinkedIn"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
