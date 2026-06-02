@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Works",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Developer & Hardware Engineer",
+    "description": "Based in Uzunköprü. I build web applications, develop mobile apps, and design custom IoT hardware. I simplify complex technology into clean, fast, and working solutions.",
+    "cta_projects": "View My Work",
+    "cta_contact": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Who am I?",
+    "p1": "I live and work in Uzunköprü, Turkey. I focus on software development, web design, and hardware engineering. From brainstorming to coding, and PCB layout to physical assembly, I handle the entire product cycle.",
+    "p2": "I value readable code, honest communication, and solid architecture. No corporate fluff or over-engineered solutions—just software that gets the job done."
+  },
+  "skills": {
+    "title": "What I Use",
+    "subtitle": "My Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "iot": "IoT & Embedded",
+    "tools": "Tools & Databases"
+  },
+  "projects": {
+    "title": "Recent Work",
+    "subtitle": "What I've Built",
+    "view_code": "Examine Code",
+    "view_live": "Open Project",
+    "filter_all": "All",
+    "filter_web": "Web Apps",
+    "filter_iot": "IoT & Hardware",
+    "items": [
+      {
+        "id": "1",
+        "title": "Smart Agriculture & Soil Analysis Station",
+        "description": "An IoT system that reads real-time data such as temperature, humidity, and soil minerals from fields or greenhouses, transfers it to the cloud via cellular network, and presents it with charts on a web dashboard.",
+        "category": "iot",
+        "tags": ["React", "Node.js", "ESP32", "MQTT", "MongoDB"]
+      },
+      {
+        "id": "2",
+        "title": "Virtual Exchange & Portfolio Tracking Portal",
+        "description": "A comprehensive web platform where users can follow cryptocurrency and stock data in real-time with WebSockets, trade using virtual balances, and analyze their performance.",
+        "category": "web",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Fastify", "PostgreSQL"]
+      },
+      {
+        "id": "3",
+        "title": "Industrial Device Management Panel (IIoT)",
+        "description": "A highly secure industrial interface that monitors machine statuses in factory environments, predicts failures, and sends real-time push notifications to managers.",
+        "category": "iot",
+        "tags": ["Next.js", "Tailwind CSS", "Go", "InfluxDB", "Docker"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Have a project?",
+    "name": "Your Name",
+    "email": "Your Email Address",
+    "message": "What are you looking to build?",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Your message has reached me! I will get back to you shortly.",
+    "error": "Something went wrong. Please try again."
+  }
+}

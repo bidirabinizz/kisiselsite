@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "projects": "Çalışmalar",
+    "about": "Hakkımda",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "greeting": "Selam, ben",
+    "role": "Yazılımcı & Donanım Geliştirici",
+    "description": "Uzunköprü merkezli olarak web siteleri kodluyor, mobil uygulamalar geliştiriyor ve IoT/gömülü sistem donanımları tasarlıyorum. Teknolojinin karmaşık kısımlarını sadeleştirip çalışan, hızlı ve temiz çözümler sunarım.",
+    "cta_projects": "Çalışmalarımı Gör",
+    "cta_contact": "İletişime Geç"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "subtitle": "Ben kimim?",
+    "p1": "Uzunköprü'de yaşıyorum. Bilgisayar programlama, web tasarımı ve donanım geliştirme alanlarında çalışıyorum. Fikir aşamasından kodlamaya, kart tasarımından (PCB) lehimlemeye kadar tüm süreçleri bizzat yürütüyorum.",
+    "p2": "Büyük kurumsal kalıplar veya yapay zeka tarafından yazılmış gibi duran abartılı tanımlardan hoşlanmam. İşimi temiz, zamanında ve doğru yapmaya odaklanırım."
+  },
+  "skills": {
+    "title": "Neler Kullanıyorum?",
+    "subtitle": "Teknoloji Setim",
+    "frontend": "Arayüz / Ön Yüz",
+    "backend": "Sistem / Arka Yüz",
+    "iot": "IoT & Gömülü Sistem",
+    "tools": "Araçlar & Veritabanı"
+  },
+  "projects": {
+    "title": "Son Çalışmalar",
+    "subtitle": "Neler Ürettim?",
+    "view_code": "Koda Göz At",
+    "view_live": "Projeyi Aç",
+    "filter_all": "Tümü",
+    "filter_web": "Web Uygulamaları",
+    "filter_iot": "IoT & Donanım",
+    "items": [
+      {
+        "id": "1",
+        "title": "Akıllı Tarım & Toprak Analiz İstasyonu",
+        "description": "Tarla veya seralardan sıcaklık, nem, toprak mineralleri gibi verileri gerçek zamanlı okuyup hücresel ağ üzerinden buluta aktaran ve web paneli üzerinden grafiklerle sunan IoT sistemi.",
+        "category": "iot",
+        "tags": ["React", "Node.js", "ESP32", "MQTT", "MongoDB"]
+      },
+      {
+        "id": "2",
+        "title": "Sanal Borsa & Portföy Takip Portalı",
+        "description": "Kripto para ve borsa verilerini anlık WebSocket bağlantısıyla takip eden, kullanıcıların sanal bakiye ile işlem yapıp performans analizi alabildikleri kapsamlı web platformu.",
+        "category": "web",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Fastify", "PostgreSQL"]
+      },
+      {
+        "id": "3",
+        "title": "Endüstriyel Cihaz Yönetim Paneli (IIoT)",
+        "description": "Fabrika ortamındaki makine durumlarını izleyen, arıza tahminlemesi yapan ve yöneticilere anlık push bildirimleri gönderen yüksek güvenlikli endüstriyel arayüz.",
+        "category": "iot",
+        "tags": ["Next.js", "Tailwind CSS", "Go", "InfluxDB", "Docker"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Bana Ulaşın",
+    "subtitle": "Bir projeniz mi var?",
+    "name": "Adınız",
+    "email": "E-posta Adresiniz",
+    "message": "Ne yapmak istiyorsunuz?",
+    "send": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız bana ulaştı! En kısa sürede geri döneceğim.",
+    "error": "Mesaj gönderilirken bir şeyler ters gitti. Lütfen tekrar deneyin."
+  }
+}
