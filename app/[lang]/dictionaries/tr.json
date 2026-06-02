@@ -10,7 +10,7 @@
     "role": "Yazılımcı & Donanım Geliştirici",
     "description": "Uzunköprü merkezli olarak web siteleri kodluyor, mobil uygulamalar geliştiriyor ve IoT/gömülü sistem donanımları tasarlıyorum. Teknolojinin karmaşık kısımlarını sadeleştirip çalışan, hızlı ve temiz çözümler sunarım.",
     "cta_projects": "Çalışmalarımı Gör",
-    "cta_contact": "İletişime Geç"
+    "cta_contact": "CV İndir"
   },
   "about": {
     "title": "Hakkımda",
@@ -40,21 +40,39 @@
         "title": "Akıllı Tarım & Toprak Analiz İstasyonu",
         "description": "Tarla veya seralardan sıcaklık, nem, toprak mineralleri gibi verileri gerçek zamanlı okuyup hücresel ağ üzerinden buluta aktaran ve web paneli üzerinden grafiklerle sunan IoT sistemi.",
         "category": "iot",
-        "tags": ["React", "Node.js", "ESP32", "MQTT", "MongoDB"]
+        "tags": [
+          "React",
+          "Node.js",
+          "ESP32",
+          "MQTT",
+          "MongoDB"
+        ]
       },
       {
         "id": "2",
         "title": "Sanal Borsa & Portföy Takip Portalı",
         "description": "Kripto para ve borsa verilerini anlık WebSocket bağlantısıyla takip eden, kullanıcıların sanal bakiye ile işlem yapıp performans analizi alabildikleri kapsamlı web platformu.",
         "category": "web",
-        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Fastify", "PostgreSQL"]
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Fastify",
+          "PostgreSQL"
+        ]
       },
       {
         "id": "3",
         "title": "Endüstriyel Cihaz Yönetim Paneli (IIoT)",
         "description": "Fabrika ortamındaki makine durumlarını izleyen, arıza tahminlemesi yapan ve yöneticilere anlık push bildirimleri gönderen yüksek güvenlikli endüstriyel arayüz.",
         "category": "iot",
-        "tags": ["Next.js", "Tailwind CSS", "Go", "InfluxDB", "Docker"]
+        "tags": [
+          "Next.js",
+          "Tailwind CSS",
+          "Go",
+          "InfluxDB",
+          "Docker"
+        ]
       }
     ]
   },

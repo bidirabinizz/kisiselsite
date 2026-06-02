@@ -192,7 +192,7 @@ export default function AdminPage() {
         <div className="flat-kart p-8 shadow-2xl bg-card-bg/60 backdrop-blur-md">
           <div className="text-center mb-6">
             <span className="text-2xl">🔐</span>
-            <h1 className="font-title text-2xl font-extrabold tracking-tight mt-2 text-foreground">
+            <h1 className="text-2xl font-extrabold tracking-tight mt-2 text-foreground">
               Yönetim Paneli Girişi
             </h1>
             <p className="text-xs text-muted mt-1 font-mono">// projeleri yönetmek için şifrenizi girin</p>
@@ -238,7 +238,7 @@ export default function AdminPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-card-border pb-6">
         <div>
-          <h1 className="font-title text-3xl font-extrabold tracking-tight text-foreground">
+          <h1 className="text-3xl font-extrabold tracking-tight text-foreground">
             Proje Yönetim Paneli
           </h1>
           <p className="text-xs text-muted font-mono mt-1">
@@ -385,7 +385,7 @@ export default function AdminPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
           <div className="flat-kart w-full max-w-2xl bg-card-bg shadow-2xl p-6 md:p-8 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-card-border pb-4 mb-6">
-              <h2 className="font-title text-xl font-extrabold text-foreground">
+              <h2 className="text-xl font-extrabold text-foreground">
                 {seciliProje ? 'Projeyi Düzenle' : 'Yeni Proje Ekle'}
               </h2>
               <button

@@ -92,11 +92,11 @@ export default function Navbar({ dil, sozluk }: NavbarProps) {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo / İsim */}
-        <Link href={`/${dil}`} className="text-xl font-extrabold tracking-tight glow-hover flex items-center gap-2 font-title">
+        <Link href={`/${dil}`} className="text-xl font-bold tracking-tight glow-hover flex items-center gap-2">
           <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-500 to-indigo-500 flex items-center justify-center text-white text-sm font-black shadow-lg">
             B
           </span>
-          <span className="bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
+          <span className="text-foreground font-extrabold">
             Bahadır B.
           </span>
         </Link>
@@ -194,23 +194,29 @@ export default function Navbar({ dil, sozluk }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobil Menü Paneli */}
-      {menuAcik && (
-        <div className="md:hidden absolute top-full left-0 w-full glass border-b border-foreground/10 px-6 py-6 flex flex-col gap-4 animate-fade-in shadow-2xl">
-          {menuler.map((menu) => (
-            <Link
-              key={menu.yol}
-              href={`/${dil}${menu.yol === '/' ? '' : menu.yol}`}
-              onClick={() => setMenuAcik(false)}
-              className={`text-base font-semibold py-2 transition-colors ${
-                linkAktifMi(menu.yol) ? 'text-accent' : 'text-foreground/80'
-              }`}
-            >
-              {menu.baslik}
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* Mobil Menü Paneli - Akıcı Animasyonlu ve Okunaklı Arka Plan */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-2xl border-b border-card-border px-6 py-6 flex flex-col gap-3 shadow-2xl transition-all duration-300 ease-out transform ${
+          menuAcik
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+      >
+        {menuler.map((menu) => (
+          <Link
+            key={menu.yol}
+            href={`/${dil}${menu.yol === '/' ? '' : menu.yol}`}
+            onClick={() => setMenuAcik(false)}
+            className={`text-base font-semibold py-2.5 px-3 rounded-xl transition-all ${
+              linkAktifMi(menu.yol)
+                ? 'text-accent bg-accent/5'
+                : 'text-foreground/80 hover:bg-black/5 dark:hover:bg-white/5'
+            }`}
+          >
+            {menu.baslik}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 }

@@ -93,11 +93,8 @@ export default async function Page({ params }: PageProps) {
           <span className="text-xs font-semibold text-accent tracking-widest uppercase font-mono">
             // {sozluk.hero.role}
           </span>
-          <h1 className="font-title text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-foreground">
-            {sozluk.hero.greeting}{' '}
-            <span className="bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
-              {dogrulanmisDil === 'tr' ? 'Bahadır Büyüktopaç' : 'Bahadir Buyuktopac'}
-            </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-foreground">
+            {sozluk.hero.greeting} {dogrulanmisDil === 'tr' ? 'Bahadır Büyüktopaç' : 'Bahadir Buyuktopac'}
           </h1>
           <p className="text-sm md:text-base text-muted max-w-xl leading-relaxed">
             {sozluk.hero.description}
@@ -112,7 +109,9 @@ export default async function Page({ params }: PageProps) {
               {sozluk.hero.cta_projects}
             </Link>
             <a
-              href="#iletisim"
+              href="/bahadircv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl border border-card-border bg-card-bg text-foreground text-sm font-semibold hover:border-accent/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 active:scale-[0.98]"
             >
               {sozluk.hero.cta_contact}
@@ -146,7 +145,7 @@ export default async function Page({ params }: PageProps) {
           <span className="text-xs font-semibold text-accent tracking-wider uppercase font-mono">
             {sozluk.about.subtitle}
           </span>
-          <h2 className="font-title text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
+          <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
             {sozluk.about.title}
           </h2>
           <p className="text-sm text-muted leading-relaxed">
@@ -164,7 +163,7 @@ export default async function Page({ params }: PageProps) {
           <span className="text-xs font-semibold text-accent tracking-wider uppercase font-mono">
             {sozluk.skills.subtitle}
           </span>
-          <h2 className="font-title text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
+          <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
             {sozluk.skills.title}
           </h2>
         </div>
@@ -231,7 +230,7 @@ export default async function Page({ params }: PageProps) {
             <span className="text-xs font-semibold text-accent tracking-wider uppercase font-mono">
               {sozluk.projects.subtitle}
             </span>
-            <h2 className="font-title text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
               {sozluk.projects.title}
             </h2>
           </div>
@@ -275,7 +274,7 @@ export default async function Page({ params }: PageProps) {
           <span className="text-xs font-semibold text-accent tracking-wider uppercase font-mono">
             {sozluk.contact.subtitle}
           </span>
-          <h2 className="font-title text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
+          <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground">
             {sozluk.contact.title}
           </h2>
         </div>

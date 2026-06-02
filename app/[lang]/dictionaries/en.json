@@ -10,7 +10,7 @@
     "role": "Developer & Hardware Engineer",
     "description": "Based in Uzunköprü. I build web applications, develop mobile apps, and design custom IoT hardware. I simplify complex technology into clean, fast, and working solutions.",
     "cta_projects": "View My Work",
-    "cta_contact": "Get in Touch"
+    "cta_contact": "CV Download"
   },
   "about": {
     "title": "About Me",
@@ -40,21 +40,39 @@
         "title": "Smart Agriculture & Soil Analysis Station",
         "description": "An IoT system that reads real-time data such as temperature, humidity, and soil minerals from fields or greenhouses, transfers it to the cloud via cellular network, and presents it with charts on a web dashboard.",
         "category": "iot",
-        "tags": ["React", "Node.js", "ESP32", "MQTT", "MongoDB"]
+        "tags": [
+          "React",
+          "Node.js",
+          "ESP32",
+          "MQTT",
+          "MongoDB"
+        ]
       },
       {
         "id": "2",
         "title": "Virtual Exchange & Portfolio Tracking Portal",
         "description": "A comprehensive web platform where users can follow cryptocurrency and stock data in real-time with WebSockets, trade using virtual balances, and analyze their performance.",
         "category": "web",
-        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Fastify", "PostgreSQL"]
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Fastify",
+          "PostgreSQL"
+        ]
       },
       {
         "id": "3",
         "title": "Industrial Device Management Panel (IIoT)",
         "description": "A highly secure industrial interface that monitors machine statuses in factory environments, predicts failures, and sends real-time push notifications to managers.",
         "category": "iot",
-        "tags": ["Next.js", "Tailwind CSS", "Go", "InfluxDB", "Docker"]
+        "tags": [
+          "Next.js",
+          "Tailwind CSS",
+          "Go",
+          "InfluxDB",
+          "Docker"
+        ]
       }
     ]
   },

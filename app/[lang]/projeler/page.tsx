@@ -36,7 +36,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
         <span className="text-xs font-semibold text-accent tracking-wider uppercase font-mono">
           {sozluk.projects.subtitle}
         </span>
-        <h1 className="font-title text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-foreground">
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-foreground">
           {sozluk.projects.title}
         </h1>
       </div>

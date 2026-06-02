@@ -1,19 +1,13 @@
 import type { Metadata } from 'next';
-import { Syne, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import '../globals.css';
 import { sozlukGetir } from './dictionaries';
 import Navbar from '../bilesenler/Navbar';
 import Footer from '../bilesenler/Footer';
 import YuklemeEkrani from '../bilesenler/YuklemeEkrani';
 
-const syne = Syne({
-  variable: '--font-syne',
-  subsets: ['latin'],
-  weight: ['400', '700', '800'],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: '--font-plus-jakarta',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
 });
@@ -62,7 +56,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={dogrulanmisDil}
-      className={`${plusJakarta.variable} ${syne.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>

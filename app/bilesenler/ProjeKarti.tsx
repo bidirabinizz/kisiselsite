@@ -68,7 +68,7 @@ export default function ProjeKarti({ proje, sozluk }: ProjeKartiProps) {
 
       {/* İçerik Gövdesi */}
       <div className="p-5 flex flex-col flex-grow">
-        <h3 className="font-title text-lg font-bold mb-2 tracking-tight text-foreground group-hover:text-accent transition-colors duration-300">
+        <h3 className="text-lg font-bold mb-2 tracking-tight text-foreground group-hover:text-accent transition-colors duration-300">
           {proje.title}
         </h3>
         
