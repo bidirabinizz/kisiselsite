@@ -147,3 +147,23 @@ export async function projeSil(id: string) {
     return { success: false, error: err.message };
   }
 }
+
+export async function projeGetir(id: string): Promise<Proje | null> {
+  try {
+    const { data, error } = await supabase
+      .from('projects')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (error) {
+      console.error('Proje detayını çekerken veritabanı hatası:', error);
+      return null;
+    }
+    return data as Proje;
+  } catch (err) {
+    console.error('Proje detayını çekerken beklenmedik hata:', err);
+    return null;
+  }
+}
+

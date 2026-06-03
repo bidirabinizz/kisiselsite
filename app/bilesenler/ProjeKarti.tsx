@@ -1,5 +1,8 @@
 'use client';
 
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
 interface Proje {
   id: string;
   title: string;
@@ -18,31 +21,36 @@ interface ProjeKartiProps {
 }
 
 export default function ProjeKarti({ proje, sozluk }: ProjeKartiProps) {
+  const params = useParams();
+  const lang = params?.lang === 'en' ? 'en' : 'tr';
+  
   // Proje kategorisine göre uygun etiketi alıyoruz
   const kategoriEtiketi = proje.category === 'iot' ? sozluk.projects.filter_iot : sozluk.projects.filter_web;
   
   return (
     <div className="flat-kart flat-hover flex flex-col h-full overflow-hidden relative group">
       {/* Üst Kısım - Görsel / Banner */}
-      {proje.image_url ? (
-        <div className="relative w-full h-40 overflow-hidden border-b border-card-border/50">
-          <img
-            src={proje.image_url}
-            alt={proje.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-      ) : (
-        /* Görsel Yoksa Modern Neon Desenli Gradyan */
-        <div className="relative w-full h-36 bg-gradient-to-br from-accent/15 via-accent-secondary/5 to-accent/5 flex items-center justify-center border-b border-card-border/50 overflow-hidden">
-          <div className="absolute inset-0 grid-bg opacity-20" />
-          <div className="absolute -right-8 -bottom-8 w-20 h-20 rounded-full bg-accent/15 blur-xl group-hover:opacity-80 transition-opacity" />
-          <div className="absolute -left-8 -top-8 w-20 h-20 rounded-full bg-accent-secondary/15 blur-xl group-hover:opacity-80 transition-opacity" />
-          <span className="text-3xl opacity-75 group-hover:scale-110 transition-transform duration-500" role="img" aria-label="proje-tipi">
-            {proje.category === 'iot' ? '🔌' : '💻'}
-          </span>
-        </div>
-      )}
+      <Link href={`/${lang}/projeler/${proje.id}`} className="block relative overflow-hidden select-none">
+        {proje.image_url ? (
+          <div className="relative w-full h-40 overflow-hidden border-b border-card-border/50">
+            <img
+              src={proje.image_url}
+              alt={proje.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ) : (
+          /* Görsel Yoksa Modern Neon Desenli Gradyan */
+          <div className="relative w-full h-36 bg-gradient-to-br from-accent/15 via-accent-secondary/5 to-accent/5 flex items-center justify-center border-b border-card-border/50 overflow-hidden">
+            <div className="absolute inset-0 grid-bg opacity-20" />
+            <div className="absolute -right-8 -bottom-8 w-20 h-20 rounded-full bg-accent/15 blur-xl group-hover:opacity-80 transition-opacity" />
+            <div className="absolute -left-8 -top-8 w-20 h-20 rounded-full bg-accent-secondary/15 blur-xl group-hover:opacity-80 transition-opacity" />
+            <span className="text-3xl opacity-75 group-hover:scale-110 transition-transform duration-500" role="img" aria-label="proje-tipi">
+              {proje.category === 'iot' ? '🔌' : '💻'}
+            </span>
+          </div>
+        )}
+      </Link>
 
       {/* Bilgi Başlığı & Durum Rozeti */}
       <div className="p-5 pb-3 flex items-center justify-between border-b border-card-border/30 bg-black/[0.01] dark:bg-white/[0.01]">
@@ -69,7 +77,9 @@ export default function ProjeKarti({ proje, sozluk }: ProjeKartiProps) {
       {/* İçerik Gövdesi */}
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="text-lg font-bold mb-2 tracking-tight text-foreground group-hover:text-accent transition-colors duration-300">
-          {proje.title}
+          <Link href={`/${lang}/projeler/${proje.id}`}>
+            {proje.title}
+          </Link>
         </h3>
         
         <p className="text-sm text-muted mb-4 line-clamp-3 leading-relaxed flex-grow">
