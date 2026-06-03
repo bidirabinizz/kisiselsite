@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { sozlukGetir, dilKontrolEt } from './dictionaries';
 import ProjeKarti from '../bilesenler/ProjeKarti';
 import IletisimFormu from '../bilesenler/IletisimFormu';
+import SequenceHero from '../bilesenler/SequenceHero';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projeleriGetir } from '../actions/projectActions';
@@ -86,58 +87,8 @@ export default async function Page({ params }: PageProps) {
         <p>Edirne Uzunköprü bölgesinde freelance yazılımcı arayanlar için temiz kod, yüksek performanslı web çözümleri sunuyorum.</p>
       </div>
 
-      {/* 1. KAHRAMAN (HERO) BÖLÜMÜ */}
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 min-h-[65vh] py-8">
-        {/* Sol: Giriş Yazıları */}
-        <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
-          <span className="text-xs font-semibold text-accent tracking-widest uppercase font-mono">
-            // {sozluk.hero.role}
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-foreground">
-            {sozluk.hero.greeting} {dogrulanmisDil === 'tr' ? 'Bahadır Büyüktopaç' : 'Bahadir Buyuktopac'}
-          </h1>
-          <p className="text-sm md:text-base text-muted max-w-xl leading-relaxed">
-            {sozluk.hero.description}
-          </p>
-
-          {/* Aksiyon Butonları */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-2">
-            <Link
-              href={`/${dogrulanmisDil}/projeler`}
-              className="px-6 py-3 rounded-xl bg-accent text-white text-sm font-semibold transition-all duration-300 hover:bg-accent-secondary hover:shadow-lg hover:shadow-accent/20 active:scale-[0.98] cursor-pointer"
-            >
-              {sozluk.hero.cta_projects}
-            </Link>
-            <a
-              href="/bahadircv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl border border-card-border bg-card-bg text-foreground text-sm font-semibold hover:border-accent/50 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 active:scale-[0.98]"
-            >
-              {sozluk.hero.cta_contact}
-            </a>
-          </div>
-        </div>
-
-        {/* Sağ: Flat Profil Resmi */}
-        <div className="flex-1 flex justify-center relative group">
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
-            {/* Arka Plan Glow Efekti */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-accent to-accent-secondary opacity-25 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
-            
-            {/* Fotoğraf Kutusu */}
-            <div className="relative w-full h-full rounded-3xl overflow-hidden border border-card-border/80 shadow-2xl bg-card-bg/60 backdrop-blur-sm group-hover:border-accent/30 transition-all duration-500">
-              <Image
-                src="/avatar.png"
-                alt="Bahadır Büyüktopaç Profil"
-                fill
-                priority
-                className="object-cover scale-102 group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 1. GİRİŞ (HERO) BÖLÜMÜ */}
+      <SequenceHero dil={dogrulanmisDil} sozluk={sozluk} />
 
       {/* 2. HAKKIMDA BÖLÜMÜ */}
       <section id="hakkimda" className="flat-kart p-8 md:p-10 bg-black/[0.01] dark:bg-white/[0.01]">
@@ -210,7 +161,7 @@ export default async function Page({ params }: PageProps) {
 
           {/* Tools */}
           <div className="flat-kart p-5 hover:border-accent transition-colors duration-150 bg-black/[0.01] dark:bg-white/[0.01]">
-            <div className="text-xl mb-3">🧰</div>
+            <div className="text-xl mb-3">🛠️</div>
             <h3 className="font-bold text-sm text-foreground mb-3">{sozluk.skills.tools}</h3>
             <div className="flex flex-wrap gap-1.5">
               {araclarVeVeritabanlari.map((tek) => (
